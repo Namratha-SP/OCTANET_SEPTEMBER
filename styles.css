@@ -1,121 +1,91 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #71daea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
-
 
 .container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 400px;
+    background-color: #ed8686;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-.hero {
-    background: url('bg44.webp') no-repeat center center/cover; 
-    color: #30da20;
-    padding: 100px 20px; 
+h1 {
     text-align: center;
-    position: relative;
+    color: #0b0a0a;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); 
-    z-index: 1;
+#todo-form {
+    display: flex;
+    justify-content: space-between;
 }
 
-.hero .container {
-    position: relative;
-    z-index: 2;
+#todo-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #e1f12b;
+    border-radius: 4px;
 }
 
-.hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #13bf07;
+    background-color: #d7e2ef;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+button:hover {
+    background-color: #0fe99c;
 }
 
-.hero .btn {
-    background: #b8db07;
-    color: #bfc5cb;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s;
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
 }
 
-.hero .btn:hover {
-    background: #bc8d8d;
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #f6dfdf;
 }
 
-
-.features {
-    padding: 60px 20px;
-    background: url('c:\Users\HP\Downloads\mainbg.png - Copy.webp') no-repeat center center/cover;  
-    text-align: center;
-    color: #090112;
-    position: relative;
+li.completed {
+    text-decoration: line-through;
+    color: #f49458;
 }
 
-.features::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgb(145, 219, 231); 
-    z-index: 1;
+.delete-btn, .edit-btn {
+    background-color: #090909;
+    color: rgba(228, 52, 52, 0.79);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
 }
 
-.features .container {
-    position: relative;
-    z-index: 2;
+.edit-btn {
+    background-color: #010e01; /* Green */
 }
 
-.features h2 {
-    margin-bottom: 40px;
-    font-size: 2em;
+.delete-btn:hover, .edit-btn:hover {
+    background-color: #5c24f5;
 }
 
-.feature-item {
-    margin-bottom: 30px;
-}
-
-.feature-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-
-.footer {
-    background: #d6d927;
-    color: #f113ab;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.footer p {
-    margin: 0;
+.edit-btn:hover {
+    background-color: #71ce76; /* Darker Green */
 }
